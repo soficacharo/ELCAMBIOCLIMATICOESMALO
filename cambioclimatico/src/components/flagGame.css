@@ -1,0 +1,35 @@
+img{
+    width: 40rem;
+    height: 25rem;
+}
+@font-face {
+  font-family: 'TTHoves';
+  font-style: normal;
+  src: local('TTHoves'), url('./assets/TTHoves-Bold.ttf') format('ttf');
+
+}
+
+.texto{
+  width: 35rem;
+  height: 8rem;
+}
+
+.container-lg{
+  width:70%;
+  object-fit:contain ;
+ 
+}
+
+body{
+  background-color: #65bd43;
+    margin: 0;
+    margin-bottom: 2rem;
+    font-family: 'TTHoves';
+    font-stretch: expanded;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  color: #6C5E99;
+}
