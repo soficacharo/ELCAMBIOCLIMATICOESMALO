@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useEffect } from "react"
-import './flagGame.css'
-import { ComposableMap, Geographies, Geography } from "react-simple-maps"
+import './CambioClimatico.css'
+import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
 
-const FlagGame = (props) => {
+const CambioClimatico = (props) => {
     const [Flag, setFlag] = useState([{
         flag: null,
         titulo: null,
@@ -48,24 +48,43 @@ const FlagGame = (props) => {
     return (
         <>
 
-            <h1>Major Geographical Regions of the World</h1>
-            <div class="container texto"><h5>¿de que pais se trata?</h5></div>
-            <form onSubmit={handleSubmit}>
-                <div class= "container-lg"> <ComposableMap>
-        <Geographies geography={"https://raw.githubusercontent.com/deldersveld/topojson/master/world-land.json"}>
+            <h1>CAUSAS DEL CAMBIO CLIMATICO</h1>
+                <div class="box"> <ComposableMap>
+        <Geographies geography={  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json"}>
         {({ geographies }) =>
         geographies.map((geo) => (
             <Geography key={geo.rsmKey} geography={geo} fill="#C4BFD4"stroke="#6C5E99"/>
         ))
         }
         </Geographies>
+        <Marker coordinates={[134.367299, -25.152789]}>
+        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+            1</text></Marker>
+
+        <Marker coordinates={[42.092147, 33.835654]}>
+        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+            2</text></Marker>
+
+        <Marker coordinates={[16.189470, -26.000684]}>
+        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+            3</text></Marker>
+
+        <Marker coordinates={[-68.537086, -39.811215]}>
+        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+            4</text></Marker>
+
+        <Marker coordinates={[-65.599710, -3.543632]}>
+            <circle r={10} fill="#9CEBAF" stroke="#6C5E99"> </circle><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+            5</text></Marker>
+        
+        <Marker coordinates={[-107.386353, 42.411751]}>
+        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+            6</text></Marker>
+        
     </ComposableMap></div>
-                <input type="text" name="pais" className="u-full-width" placeholder={Flag[AFlag].nombre} />
-                <button type="submit" className="u-full-width button-primary">Submit</button>
-                <h3>Tu puntaje es {puntaje}</h3>
-            </form>
+
         </>
     )
 }
 
-export default FlagGame
+export default CambioClimatico

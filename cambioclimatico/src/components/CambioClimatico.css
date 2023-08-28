@@ -4,7 +4,6 @@ img{
 }
 @font-face {
   font-family: 'TTHoves';
-  font-style: normal;
   src: local('TTHoves'), url('./assets/TTHoves-Bold.ttf') format('ttf');
 
 }
@@ -21,7 +20,7 @@ img{
 }
 
 body{
-  background-color: #65bd43;
+  background-color: #EBECE8;
     margin: 0;
     margin-bottom: 2rem;
     font-family: 'TTHoves';
@@ -32,4 +31,8 @@ body{
 
 h1{
   color: #6C5E99;
+}
+
+.box{
+width: 50rem;
 }

@@ -1,11 +1,11 @@
 import './App.css';
-import FlagGame from './components/flagGame.jsx'
+import CambioClimatico from './components/CambioClimatico.jsx'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <FlagGame></FlagGame>
+        <CambioClimatico></CambioClimatico>
       </header>
     </div>
   );
