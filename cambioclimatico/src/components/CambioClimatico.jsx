@@ -1,6 +1,8 @@
 import React, { Fragment, useState, useEffect } from "react"
+import { Link, Route } from "react-router-dom"
 import './CambioClimatico.css'
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps"
+import Problematica from "./Problematica"
 
 const CambioClimatico = (props) => {
     const [Flag, setFlag] = useState([{
@@ -61,16 +63,16 @@ const CambioClimatico = (props) => {
         <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
             1</text></Marker>
 
-        <Marker coordinates={[42.092147, 33.835654]}>
+        <Link to={`/CambioClimatico/Problematica/:2`}><Marker coordinates={[42.092147, 33.835654]}>
         <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
-            2</text></Marker>
+            2</text></Marker></Link>
 
         <Marker coordinates={[16.189470, -26.000684]}>
         <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
             3</text></Marker>
 
         <Marker coordinates={[-68.537086, -39.811215]}>
-        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"}>
+        <circle r={10} fill="#9CEBAF" stroke="#6C5E99" /><text textAnchor="middle" dy={"0.3rem"} fill="#6C5E99" fontSize={"1rem"} onClick="">
             4</text></Marker>
 
         <Marker coordinates={[-65.599710, -3.543632]}>
@@ -83,6 +85,8 @@ const CambioClimatico = (props) => {
         
     </ComposableMap></div>
 
+        
+    
         </>
     )
 }
